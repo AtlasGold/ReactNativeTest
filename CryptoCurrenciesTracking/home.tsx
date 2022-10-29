@@ -39,8 +39,7 @@ export default function Home() {
     }
   }, []);
 
- const [selectedCoin, setSelectedCoin] = useState(null);
-
+  const [selectedCoin, setSelectedCoin] = useState(null);
   return (
     <GestureHandlerRootView style={HomeScreenStyle.top}>
       <View style={HomeScreenStyle.container}>
@@ -79,18 +78,15 @@ export default function Home() {
               style={{ borderRadius: 50, flex: 1 }}
             >
               {selectedCoin ? (
- <View style={{ flex: 1 }}>
+                <View style={{ flex: 1 }}>
+                  <View style={{flexDirection:"row"}}>
+                  <Text style={HomeScreenStyle.titleChart}> Last Week Price </Text>
+                  <Text style={{color:'white',marginTop:60,marginBottom:-10,marginHorizontal:0, fontSize:24}}> {} </Text>
+
+                  </View>
                   <VictoryChart animate theme={VictoryTheme.material}>
-                    <VictoryAxis
-                      sortKey="x"
-                      sortOrder="descending"
-                      tickFormat={(x) =>
-                        new Date(x).toLocaleTimeString("en-GB", {
-                          timeZone: "America/Sao_Paulo",
-                          timeStyle: "short",
-                        })
-                      }
-                    />
+                    <VictoryAxis dependentAxis></VictoryAxis>
+
                     <VictoryLine
                       data={selectedCoin["sparkline_in_7d"]["price"]}
                       x="timestamp"

@@ -16,7 +16,8 @@ import { StyleSheet } from "react-native";
     fontWeight:'bold',
     padding:10
 
-  }
+  },
+  titleChart:{color:'white',marginTop:60,marginBottom:-10,marginHorizontal:0, fontSize:24}
 
 });
 
