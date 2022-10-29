@@ -26,7 +26,7 @@ export const currencyCard = StyleSheet.create({
     fontSize: 16,
     color: "#949494",
     marginBottom:-15,
-    marginTop:5
+  
   },
   image: {
     height: 48,

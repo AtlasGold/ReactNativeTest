@@ -63,7 +63,7 @@ const ListCurrencies = ({
           <View>
             <View style={currencyCard.rigthContent}>
               <Text style={currencyCard.currencyTitle}>
-                ${currentPrice.toFixed(3)}
+                ${currentPrice.toFixed(2)}
               </Text>
               <Text
                 style={[currencyCard.currencySubtitle, { color: ChangeColor }]}
