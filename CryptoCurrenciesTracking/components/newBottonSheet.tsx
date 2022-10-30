@@ -11,7 +11,7 @@ import Animated, {
 import {ModalStyle} from "../styles/modalStyle";
 const { height: SCREEN_HEIGHT } = Dimensions.get("window");
 
-const MAX_TRANSLATE_Y = -SCREEN_HEIGHT + 400;
+const MAX_TRANSLATE_Y = -SCREEN_HEIGHT + 320;
 
 type NewBottomSheetProps = {
   children?: React.ReactNode;

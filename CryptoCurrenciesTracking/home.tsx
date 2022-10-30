@@ -103,7 +103,7 @@ export default function Home() {
                   </VictoryChart>
                 </View>
               ) : (
-                <Text> Selecione Uma Moeda</Text>
+                null// Não retorna nada caso o modal demore a abrir
               )}
             </LinearGradient>
           </View>
