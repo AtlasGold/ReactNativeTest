@@ -46,7 +46,7 @@ export default function Home() {
       <View style={HomeScreenStyle.container}>
         <View>
           <Text style={HomeScreenStyle.titleText}>
-            Keep an Eye on Your Cryptos ...
+            Keep an Eye on Your Cryptos
           </Text>
         </View>
         <StatusBar style="light" />

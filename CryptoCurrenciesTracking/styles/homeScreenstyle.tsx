@@ -19,12 +19,12 @@ export const HomeScreenStyle = StyleSheet.create({
   },
 
   titleChart: {
-    fontSize: 24,
+    fontSize: 20,
     marginTop: 60,
     color: "white",
     marginBottom: -10,
     marginHorizontal: 0,
-    fontWeight:"300",
-    marginStart:15 
+    fontWeight:"500",
+    marginStart:15 ,
    },
 });
