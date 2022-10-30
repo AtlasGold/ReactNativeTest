@@ -1,45 +1,46 @@
-
 import { StyleSheet } from "react-native";
 
-export const currencyCard = StyleSheet.create({
+export const CurrencyCardStyle = StyleSheet.create({
   rootContainer: {
-    paddingHorizontal: 16,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
     height: 70,
+    marginVertical: 10,
+    alignItems: "center",
+    flexDirection: "row",
     marginHorizontal: 10,
-    marginVertical:10,
-    
+    paddingHorizontal: 16,
+    justifyContent: "space-between",
   },
+
   leftContent: {
     flexDirection: "row",
     alignItems: "center",
   },
+
   currencyTitle: {
     fontSize: 20,
+    color: "white",
+    marginTop: -18,
     fontWeight: "bold",
-    color:"white",
-    marginTop:-18
   },
+
   currencySubtitle: {
     fontSize: 16,
     color: "#949494",
-    marginBottom:-15,
-  
+    marginBottom: -15,
   },
+
   image: {
-    height: 48,
     width: 48,
-    resizeMode: "contain",
+    height: 48,
+    color: "white",
     marginRight: 20,
-    marginLeft:-15,
-    borderColor:'transparent',
-    color:"white"
+    marginLeft: -15,
+    resizeMode: "contain",
+    borderColor: "transparent",
   },
 
   rigthContent: {
-    flexDirection: "column",
     alignItems: "flex-end",
+    flexDirection: "column",
   },
 });

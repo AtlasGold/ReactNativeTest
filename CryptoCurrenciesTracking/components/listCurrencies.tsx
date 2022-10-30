@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Image, Text, TouchableOpacity } from "react-native";
-import { currencyCard } from "../styles/currenyListStyle";
+import { CurrencyCardStyle } from "../styles/currenyListStyle";
 import { LinearGradient } from "expo-linear-gradient";
 
 const ListCurrencies = ({
@@ -43,30 +43,33 @@ const ListCurrencies = ({
           marginHorizontal: 30,
           marginVertical: 10,
           borderRadius: 20,
-         
+
           elevation: 1,
         }}
       >
-        <View style={currencyCard.rootContainer}>
+        <View style={CurrencyCardStyle.rootContainer}>
           {/* Lado Esquerdo */}
-          <View style={currencyCard.leftContent}>
-            <Image source={{ uri: logoURL }} style={currencyCard.image} />
+          <View style={CurrencyCardStyle.leftContent}>
+            <Image source={{ uri: logoURL }} style={CurrencyCardStyle.image} />
             <View>
-              <Text style={currencyCard.currencyTitle}>
+              <Text style={CurrencyCardStyle.currencyTitle}>
                 {symbol.toUpperCase()}
               </Text>
-              <Text style={currencyCard.currencySubtitle}>{name}</Text>
+              <Text style={CurrencyCardStyle.currencySubtitle}>{name}</Text>
             </View>
           </View>
 
           {/* Lado Direito */}
           <View>
-            <View style={currencyCard.rigthContent}>
-              <Text style={currencyCard.currencyTitle}>
+            <View style={CurrencyCardStyle.rigthContent}>
+              <Text style={CurrencyCardStyle.currencyTitle}>
                 ${currentPrice.toFixed(2)}
               </Text>
               <Text
-                style={[currencyCard.currencySubtitle, { color: ChangeColor }]}
+                style={[
+                  CurrencyCardStyle.currencySubtitle,
+                  { color: ChangeColor },
+                ]}
               >
                 {priceChangePercentage7d.toFixed(3)}
               </Text>

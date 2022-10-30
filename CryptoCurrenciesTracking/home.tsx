@@ -7,7 +7,7 @@ import NewBottomSheet, {
 } from "./components/newBottonSheet";
 import ListCurrencies from "./components/listCurrencies";
 import modalStyle from "./styles/modalStyle";
-import HomeScreenStyle from "./styles/homeScreenstyle";
+import { HomeScreenStyle } from "./styles/homeScreenstyle";
 import { getCryptoData } from "./hooks/apiCrypto";
 import { LinearGradient } from "expo-linear-gradient";
 import {
@@ -28,7 +28,7 @@ export default function Home() {
   }, []);
   const ref = useRef<NewBottomSheetRefProps>(null);
 
-  const onPress = useCallback((item: any) => {
+  const onPress:any = useCallback((item: null) => {
     setSelectedCoin(item);
 
     const isActive = ref?.current?.isActive();
@@ -79,10 +79,23 @@ export default function Home() {
             >
               {selectedCoin ? (
                 <View style={{ flex: 1 }}>
-                  <View style={{flexDirection:"row"}}>
-                  <Text style={HomeScreenStyle.titleChart}> Last Week Price </Text>
-                  <Text style={{color:'white',marginTop:60,marginBottom:-10,marginHorizontal:0, fontSize:24}}> {} </Text>
-
+                  <View style={{ flexDirection: "row" }}>
+                    <Text style={HomeScreenStyle.titleChart}>
+                      {" "}
+                      Last Week Price{" "}
+                    </Text>
+                    <Text
+                      style={{
+                        color: "white",
+                        marginTop: 60,
+                        marginBottom: -10,
+                        marginHorizontal: 0,
+                        fontSize: 24,
+                      }}
+                    >
+                      {" "}
+                      {}{" "}
+                    </Text>
                   </View>
                   <VictoryChart animate theme={VictoryTheme.material}>
                     <VictoryAxis dependentAxis></VictoryAxis>
