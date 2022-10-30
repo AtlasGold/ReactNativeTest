@@ -16,7 +16,7 @@ const ListCurrencies = ({
   currentPrice: number;
   priceChangePercentage7d: number;
   logoURL: string;
-  onPress: any;
+  onPress: ()=> void;
 }) => {
   /* Para Mudar a cor dos cartões de acordo com a taxa da crypto */
   const ChangeColor = priceChangePercentage7d > 0 ? "#1db47c" : "#b44754";
