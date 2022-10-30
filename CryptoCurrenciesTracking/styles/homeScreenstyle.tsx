@@ -16,7 +16,6 @@ export const HomeScreenStyle = StyleSheet.create({
     padding: 10,
     fontSize: 24,
     color: "white",
-    fontWeight: "bold",
   },
 
   titleChart: {
@@ -25,5 +24,7 @@ export const HomeScreenStyle = StyleSheet.create({
     color: "white",
     marginBottom: -10,
     marginHorizontal: 0,
-  },
+    fontWeight:"300",
+    marginStart:15 
+   },
 });

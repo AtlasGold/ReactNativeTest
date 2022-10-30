@@ -86,12 +86,19 @@ export default function Home() {
                     </Text>
                   </View>
                   <VictoryChart animate theme={VictoryTheme.material}>
-                    <VictoryAxis dependentAxis></VictoryAxis>
+                    <VictoryAxis
+                      dependentAxis
+                      style={{
+                        axis: { stroke: "#CCCC" },
+                        tickLabels: { fill: "#CCCC" },
+                      }}
+                    ></VictoryAxis>
 
                     <VictoryLine
                       data={selectedCoin["sparkline_in_7d"]["price"]}
                       x="timestamp"
                       y="value"
+                      style={{ data: { stroke: "rgba(57, 145, 80, 1)" } }}
                     ></VictoryLine>
                   </VictoryChart>
                 </View>
