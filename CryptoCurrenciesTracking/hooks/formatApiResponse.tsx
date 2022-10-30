@@ -15,7 +15,6 @@ export const formatSparkline = (numbers: Array<string>) => {
 export const fixDataFormat = (data: Array<number>) => {
   let formattedResponse: object[] = [];
 
-
   data.forEach((item: any): void => {
     const formattedSparkline = formatSparkline(item.sparkline_in_7d.price);
 

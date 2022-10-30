@@ -5,8 +5,6 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { verifyConnection } from "./verifyConnection";
 
 export const getCryptoData = async () => {
-  console.log(await verifyConnection());
-
   try {
     if (await verifyConnection()) {
       /* 
