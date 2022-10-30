@@ -1,5 +1,4 @@
 import moment from "moment";
-import _ from "lodash";
 //para cada item respondido da API fazer um push no valor convertido
 export const formatSparkline = (numbers: Array<string>) => {
   const sevenDaysAgo = moment().subtract(7, "minutes").unix();

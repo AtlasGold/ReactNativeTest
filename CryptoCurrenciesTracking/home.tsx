@@ -1,23 +1,26 @@
 import { StatusBar } from "expo-status-bar";
-import React, { useCallback, useEffect, useRef, useState } from "react";
 import { FlatList, View, Text } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import NewBottomSheet, {
   NewBottomSheetRefProps,
 } from "./components/newBottonSheet";
 import ListCurrencies from "./components/listCurrencies";
-import modalStyle from "./styles/modalStyle";
+import { ModalStyle } from "./styles/modalStyle";
 import { HomeScreenStyle } from "./styles/homeScreenstyle";
 import { getCryptoData } from "./hooks/apiCrypto";
-import { LinearGradient } from "expo-linear-gradient";
 import {
   VictoryChart,
   VictoryLine,
   VictoryTheme,
   VictoryAxis,
 } from "victory-native";
+
 export default function Home() {
   const [data, setData] = useState([]);
+  const [selectedCoin, setSelectedCoin] = useState(null);
+  const ref = useRef<NewBottomSheetRefProps>(null);
 
   useEffect(() => {
     const fetchCryptoData = async () => {
@@ -26,9 +29,8 @@ export default function Home() {
     };
     fetchCryptoData();
   }, []);
-  const ref = useRef<NewBottomSheetRefProps>(null);
 
-  const onPress:any = useCallback((item: null) => {
+  const onPress = useCallback((item: null) => {
     setSelectedCoin(item);
 
     const isActive = ref?.current?.isActive();
@@ -39,7 +41,6 @@ export default function Home() {
     }
   }, []);
 
-  const [selectedCoin, setSelectedCoin] = useState(null);
   return (
     <GestureHandlerRootView style={HomeScreenStyle.top}>
       <View style={HomeScreenStyle.container}>
@@ -66,7 +67,7 @@ export default function Home() {
           )}
         />
         <NewBottomSheet ref={ref} logo={selectedCoin?.["image"]}>
-          <View style={modalStyle.insideBottomSheet}>
+          <View style={ModalStyle.insideBottomSheet}>
             <LinearGradient
               colors={[
                 "rgba(15, 15, 15, 1)",
@@ -81,20 +82,7 @@ export default function Home() {
                 <View style={{ flex: 1 }}>
                   <View style={{ flexDirection: "row" }}>
                     <Text style={HomeScreenStyle.titleChart}>
-                      {" "}
-                      Last Week Price{" "}
-                    </Text>
-                    <Text
-                      style={{
-                        color: "white",
-                        marginTop: 60,
-                        marginBottom: -10,
-                        marginHorizontal: 0,
-                        fontSize: 24,
-                      }}
-                    >
-                      {" "}
-                      {}{" "}
+                      Last Week Price
                     </Text>
                   </View>
                   <VictoryChart animate theme={VictoryTheme.material}>

@@ -8,7 +8,7 @@ import Animated, {
   useSharedValue,
   withSpring,
 } from "react-native-reanimated";
-import modalStyle from "../styles/modalStyle";
+import {ModalStyle} from "../styles/modalStyle";
 const { height: SCREEN_HEIGHT } = Dimensions.get("window");
 
 const MAX_TRANSLATE_Y = -SCREEN_HEIGHT + 350;
@@ -78,9 +78,9 @@ const NewBottomSheet = React.forwardRef<
   return (
     <GestureDetector gesture={gesture}>
       <Animated.View
-        style={[modalStyle.bottomSheetContainer, rNewBottomSheetStyle]}
+        style={[ModalStyle.bottomSheetContainer, rNewBottomSheetStyle]}
       >
-        <Image source={{ uri: logo }} style={modalStyle.image} />
+        <Image source={{ uri: logo }} style={ModalStyle.image} />
         {children}
       </Animated.View>
     </GestureDetector>
