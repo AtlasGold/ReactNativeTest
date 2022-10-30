@@ -2,19 +2,13 @@ import axios from "axios";
 import _ from "lodash";
 import { fixDataFormat } from "./formatApiResponse";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import NetInfo from "@react-native-community/netinfo";
-
-function verifyConnection() {
-  let isConnected;
-  NetInfo.fetch().then((state) => {
-    isConnected = state.isConnected;
-  });
-  return isConnected;
-}
+import { verifyConnection } from "./verifyConnection";
 
 export const getCryptoData = async () => {
+  console.log(await verifyConnection());
+
   try {
-    if (verifyConnection()) {
+    if (await verifyConnection()) {
       /* 
         Chamada da API com axios
       */
@@ -55,9 +49,8 @@ export const getCryptoData = async () => {
        * Quando o usuário estiver sem conexão o valor retornado será aquele guardado na memoria
        * na ultima vez que o usuário ultilizou o app com sucesso
        */
-      const getBackup = await AsyncStorage.getItem("@storage_Key");
+      const getBackup = await AsyncStorage.getItem("@crypto_local_storage_key");
       let retrievedValues = getBackup != null ? JSON.parse(getBackup) : null;
-
       return retrievedValues;
     }
   } catch (err) {
