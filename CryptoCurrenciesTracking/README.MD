@@ -17,6 +17,7 @@ Auxiliar o acompanhamento da flutuação de valores de crypto moedas mais popula
 ## 🐞Limitações/Bugs: 
 * O icone da Moeda demora alguns segundos para carregar;<br />
 * É necessário que o usuário tenha aberto o aplicativo ao menos uma vez com internet
+* Não foi possivel a realização de testes em dispositivos IOS
 
 ## Proximos Passos Para a Aplicação:
 * Adicionar push de notificações quando alguma moeda tem uma queda brusca na sua cotação<br />
@@ -24,7 +25,7 @@ Auxiliar o acompanhamento da flutuação de valores de crypto moedas mais popula
 
 ## 🚀 Como Rodar ?
 
-###  1️⃣ Clone the repository
+###  1️⃣ Clone o Repositório
 
 **HTTPS**
 
