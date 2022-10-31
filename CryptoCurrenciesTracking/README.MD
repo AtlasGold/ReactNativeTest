@@ -38,10 +38,12 @@ git clone https://github.com/AtlasGold/ReactNativeTest.git
 git clone git@github.com:AtlasGold/ReactNativeTest.git
 ```
 
-###  2️⃣  So Rodar!
+###  2️⃣  Entrar na pasta e Rodar!
 
 ```
+cd ReactNativeTest
 sh rodar.sh
 ```
+<br >
 
 > **_NOTA:_**  Se você ultilizar um emulador para rodar basta ter ele aberto e digitar A. Caso você use um aparelho fisico é necessário escanear o QRCode
