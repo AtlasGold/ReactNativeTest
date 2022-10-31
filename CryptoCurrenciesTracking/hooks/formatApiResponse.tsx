@@ -1,5 +1,8 @@
 import moment from "moment";
-//para cada item respondido da API fazer um push no valor convertido
+/* 
+ * Transforma o timestamp do retorno JSON da api em um formato que
+ * os Graficos leiam 
+ */
 export const formatSparkline = (numbers: Array<string>) => {
   const sevenDaysAgo = moment().subtract(7, "minutes").unix();
   let formattedSparkline = numbers.map((item: string, index: number) => {
@@ -11,7 +14,11 @@ export const formatSparkline = (numbers: Array<string>) => {
 
   return formattedSparkline;
 };
-//função para trocar o objeto retornado pela API pelo formatSparkline criado acima
+/* 
+ * Função para trocar o objeto retornado pela API
+ * pelo formatSparkline criado acima
+ */
+
 export const fixDataFormat = (data: Array<number>) => {
   let formattedResponse: object[] = [];
 

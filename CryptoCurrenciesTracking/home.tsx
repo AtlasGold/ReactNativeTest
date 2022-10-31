@@ -22,6 +22,9 @@ export default function Home() {
   const [selectedCoin, setSelectedCoin] = useState(null);
   const ref = useRef<NewBottomSheetRefProps>(null);
 
+ /* 
+  * Acessa os valores passados pela API renderiza ao decorrer da tela
+  */
   useEffect(() => {
     const fetchCryptoData = async () => {
       const cryptoData = await getCryptoData();
@@ -30,6 +33,10 @@ export default function Home() {
     fetchCryptoData();
   }, []);
 
+ /* 
+  * Atualiza o estado quando o usuário seleciona uma moeda
+  * e ativa ou desativa o moldal
+  */
   const onPress = useCallback((item: null) => {
     setSelectedCoin(item);
 
@@ -66,6 +73,7 @@ export default function Home() {
             />
           )}
         />
+
         <NewBottomSheet ref={ref} logo={selectedCoin?.["image"]}>
           <View style={ModalStyle.insideBottomSheet}>
             <LinearGradient

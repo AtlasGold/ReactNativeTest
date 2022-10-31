@@ -48,7 +48,7 @@ const ListCurrencies = ({
         }}
       >
         <View style={CurrencyCardStyle.rootContainer}>
-          {/* Lado Esquerdo */}
+          {/* Lado Esquerdo do card*/}
           <View style={CurrencyCardStyle.leftContent}>
             <Image source={{ uri: logoURL }} style={CurrencyCardStyle.image} />
             <View>
@@ -59,7 +59,7 @@ const ListCurrencies = ({
             </View>
           </View>
 
-          {/* Lado Direito */}
+          {/* Lado Direito do card*/}
           <View>
             <View style={CurrencyCardStyle.rigthContent}>
               <Text style={CurrencyCardStyle.currencyTitle}>
