@@ -40,7 +40,7 @@ git clone https://github.com/AtlasGold/ReactNativeTest.git
 git clone git@github.com:AtlasGold/ReactNativeTest.git
 ```
 
-###  2️⃣  Entrar na pasta e Rodar!
+###  2️⃣  Entre na pasta e Rode!
 
 ```
 cd ReactNativeTest
